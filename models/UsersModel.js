@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const UsersSchema = new Schema({
-  facebookId: {type: String, required: true, index: true},
+  facebookId: {type: String, required: true},
   name: {type: String},
   birthday: {type: Date},
 });
