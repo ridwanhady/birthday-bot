@@ -17,6 +17,7 @@ describe('Message Model Test', () => {
         {
           useNewUrlParser: true,
           useCreateIndex: true,
+          useUnifiedTopology: true,
         },
         (err) => {
           if (err) {
