@@ -3,6 +3,7 @@ const VERIFICATION_TOKEN = process.env.MESSENGER_VERIFY_TOKEN;
 const {replyMessage} = require('../service/replyMessage');
 const {REPLY_MESSAGE_FORMAT, QUICK_BUTTON} = require('../const');
 const util = require('util');
+const {addMessage} = require('./messageHandler');
 
 exports.verifyRequest = function(req, res) {
   console.log('Verifying');
@@ -17,12 +18,13 @@ exports.verifyRequest = function(req, res) {
 };
 
 exports.handleMessage = function(req, res) {
-  console.log('Handle Message');
   if (req.body.object === 'page') {
     req.body.entry.forEach((entry) => {
       entry.messaging.forEach((event) => {
-        console.log(event);
         processMessage(event);
+        if (event.message && event.message.text) {
+          addMessage({text: event.message.text});
+        }
       });
     });
     return res.sendStatus(200);
