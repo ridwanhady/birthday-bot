@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const MessagesSchema = new Schema({
+const messagesSchema = new Schema({
   userId: {type: String, required: true},
   incoming: {type: String},
   outcoming: {type: String},
@@ -9,6 +9,6 @@ const MessagesSchema = new Schema({
   __v: {type: Number, select: false},
 });
 
-const Messages = mongoose.model('Messages', MessagesSchema);
+const messagesModel = mongoose.model('Messages', messagesSchema);
 
-module.exports = Messages;
+module.exports = messagesModel;

@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const UsersSchema = new Schema({
-  facebookId: {type: String, required: true},
+const usersSchema = new Schema({
+  userId: {type: String, required: true},
   name: {type: String},
   birthday: {type: Date},
 });
 
-const Users = mongoose.model('Users', UsersSchema);
+const usersModel = mongoose.model('Users', usersSchema);
 
-module.exports = Users;
+module.exports = usersModel;

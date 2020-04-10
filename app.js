@@ -28,8 +28,9 @@ mongoose
 
 mongoose.set('debug', true);
 
-require('./models/UsersModel');
-require('./models/MessagesModel');
+require('./models/usersModel');
+require('./models/messagesModel');
+app.use(require('./routes'));
 
 const PORT = process.env.PORT || 5000;
 
