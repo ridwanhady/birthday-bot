@@ -31,17 +31,17 @@ These instructions will get you a copy of the project up and running on your loc
 5. Make sure `npm install` process has been done
 6. run `npm start`
 
-## Running tests
+### Running tests
 
 run `npm test`
 
-## Feature
+## Features
 
 1. Tell you how many days till next birthday. So you can prepare the best party ever! 🍻
 2. Quick Reply `Yes` and `No` answer button.
 3. Message management and logging via `/messages` endpoint.
 
-## Endpoint
+## Endpoints
 
 1. *GET* `/webhook` : to verify webhook callback url.
 2. *POST* `/webhook` : to handle webhook message.
