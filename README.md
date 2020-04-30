@@ -1,6 +1,7 @@
 # Birthday Bot
 
-![Demo](img/demo.gif)
+![Demo](http://g.recordit.co/i7hffdnaDl.gif)
+
 Birthday Bot is a server side Facebook messenger bot. That simply give you number of days from today to your birthday.
 
 ## Getting Started
